@@ -1,0 +1,21 @@
+{
+  "name": "design-system-course",
+  "version": "1.0.0",
+  "description": "Formation Design System & UI/UX : CSS moderne, Tailwind, Radix, shadcn/ui, design tokens, motion, Storybook, accessibilité RGAA, Tamagui cross-platform (débutant → expert)",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.0"
+  }
+}
