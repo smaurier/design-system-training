@@ -244,8 +244,8 @@ Usage : `<PrimaryButton tone="secondary" block>…</PrimaryButton>`. Les props `
 
 Un design system cross-platform doit gérer les écarts (ombres, hover, breakpoints). Deux outils :
 
-- **`$platform-web` / `$platform-ios` / `$platform-android`** — styles conditionnels par plateforme. Comme prop JSX : `$platform-ios={{ ... }}`. Comme **clé** dans un objet `styled()`, il faut la **quoter** : `'$platform-web': { ... }`.
-- **`media`** (breakpoints déclarés en config) — styles responsives : `$gtSm={{ ... }}`.
+- **`$platform-web` / `$platform-ios` / `$platform-android`** — styles conditionnels par plateforme. Comme prop JSX : <code v-pre>$platform-ios={{ ... }}</code>. Comme **clé** dans un objet `styled()`, il faut la **quoter** : `'$platform-web': { ... }`.
+- **`media`** (breakpoints déclarés en config) — styles responsives : <code v-pre>$gtSm={{ ... }}</code>.
 
 ```tsx
 const PlatformCard = styled(Stack, {

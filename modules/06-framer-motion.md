@@ -445,7 +445,7 @@ Motion alimente la couche **micro-interactions** du design system TribuZen. Troi
 
 **`InviteModal`** (`src/components/invite/InviteModal.tsx`) — transition d'entrée/sortie via `AnimatePresence` (overlay en fondu, panneau en scale + glissement). C'est le composant qui justifie `AnimatePresence` : sans lui, la fermeture serait sèche. Écrit complet en Exemple 2.
 
-**`PrimaryButton`** (`src/components/ui/PrimaryButton.tsx`) — `whileTap={{ scale: 0.97 }}` pour le feedback tactile immédiat (mobile-first), `whileHover` léger sur desktop. Confirme le contact avant même la réponse serveur.
+**`PrimaryButton`** (`src/components/ui/PrimaryButton.tsx`) — <code v-pre>whileTap={{ scale: 0.97 }}</code> pour le feedback tactile immédiat (mobile-first), `whileHover` léger sur desktop. Confirme le contact avant même la réponse serveur.
 
 **Tokens de motion** (`src/tokens/motion.ts`) — `duration` (fast/base/slow), `ease` (standard/emphasized), `spring.card`. Le respect de `prefers-reduced-motion` est centralisé ici + `useReducedMotion` dans chaque composant animé.
 

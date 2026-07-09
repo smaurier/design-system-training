@@ -73,7 +73,7 @@ export default function App() {
 1. **Tokens** — crée `src/tokens/motion.ts` avec `duration` (`fast`/`base`/`slow`), `ease` (`standard` cubic-bezier, `emphasized` easeInOut), et `spring.card`. Type-le avec `as const`.
 2. **RoutineCard** — extrais un composant `motion.li`. Anime `initial`/`animate` (fondu + `y`). Lis `useReducedMotion` : si réduit, `y=0` et `duration=0`. Ajoute un `aria-label`.
 3. **Liste en stagger** — transforme le `<ul>` en `motion.ul` avec `variants` parent (`staggerChildren`) et fais hériter les cards. En reduced-motion, désactive le stagger.
-4. **PrimaryButton** — `motion.button` avec `whileTap={{ scale: 0.97 }}` et `whileHover` léger. Attention : le scale au tap est acceptable même en reduced-motion (transitoire, non déclenché automatiquement), mais tu peux le neutraliser pour être strict.
+4. **PrimaryButton** — `motion.button` avec <code v-pre>whileTap={{ scale: 0.97 }}</code> et `whileHover` léger. Attention : le scale au tap est acceptable même en reduced-motion (transitoire, non déclenché automatiquement), mais tu peux le neutraliser pour être strict.
 5. **InviteModal** — `AnimatePresence` autour du contenu conditionné par `open`. Overlay en fondu + panneau en scale/glissement. `key` stable sur chaque `motion.div`. `exit` défini. Neutralise scale/`y` en reduced-motion.
 6. **Vérifie l'accessibilité** — bascule la préférence OS (voir plus bas) et confirme : plus aucun glissement/scale, seulement les fondus, et rien qui « bouge ».
 

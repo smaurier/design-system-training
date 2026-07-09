@@ -24,7 +24,7 @@ Tu démarres l'admin web de TribuZen (Next.js). Il te faut, vite, une UI propre 
 npm install @mui/material @emotion/react @emotion/styled
 ```
 
-Trois semaines plus tard, la designer veut des coins plus doux, une palette sauge/terracotta et un focus ring maison. Tu te bats contre le thème MUI, tu écris des `sx={{ ... }}` partout, tu overrides du CSS que tu ne contrôles pas. Le composant est une **boîte noire** dans `node_modules` : pour changer son comportement interne, tu n'as que les points d'extension que la lib a bien voulu exposer.
+Trois semaines plus tard, la designer veut des coins plus doux, une palette sauge/terracotta et un focus ring maison. Tu te bats contre le thème MUI, tu écris des <code v-pre>sx={{ ... }}</code> partout, tu overrides du CSS que tu ne contrôles pas. Le composant est une **boîte noire** dans `node_modules` : pour changer son comportement interne, tu n'as que les points d'extension que la lib a bien voulu exposer.
 
 shadcn/ui renverse le problème :
 
