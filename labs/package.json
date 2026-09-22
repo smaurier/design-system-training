@@ -7,7 +7,13 @@
   "scripts": {
     "lab:01": "vitest run --typecheck --root lab-01-text-de-zero",
     "solution:01": "vitest run --typecheck --root lab-01-text-de-zero --config vitest.solution.config.ts",
-    "check:01": "tsc --noEmit -p lab-01-text-de-zero"
+    "check:01": "tsc --noEmit -p lab-01-text-de-zero",
+    "lab:02": "vitest run --typecheck --root lab-02-button-de-zero",
+    "solution:02": "vitest run --typecheck --root lab-02-button-de-zero --config vitest.solution.config.ts",
+    "check:02": "tsc --noEmit -p lab-02-button-de-zero",
+    "lab:03": "vitest run --typecheck --root lab-03-ajouter-lines-a-text",
+    "solution:03": "vitest run --typecheck --root lab-03-ajouter-lines-a-text --config vitest.solution.config.ts",
+    "check:03": "tsc --noEmit -p lab-03-ajouter-lines-a-text"
   },
   "engines": {
     "node": ">=22.12.0"
@@ -31,6 +37,7 @@
     "storybook": "10.6.0",
     "typescript": "7.0.2",
     "vite": "^8.3.0",
-    "vitest": "5.0.1"
+    "vitest": "5.0.1",
+    "@radix-ui/react-slot": "1.3.3"
   }
 }

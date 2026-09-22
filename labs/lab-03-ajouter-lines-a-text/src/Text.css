@@ -1,0 +1,16 @@
+/* Text.css — L'EXISTANT. Ajoute ce qu'il faut pour la troncature, ne touche pas au reste. */
+.ds-text {
+  margin: 0;
+  font-family: var(--ds-font-family);
+}
+
+.ds-text--size-sm { font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-sm); }
+.ds-text--size-md { font-size: var(--ds-font-size-md); line-height: var(--ds-line-height-md); }
+.ds-text--size-lg { font-size: var(--ds-font-size-lg); line-height: var(--ds-line-height-lg); }
+
+.ds-text--tone-default { color: var(--ds-color-text-default); }
+.ds-text--tone-muted   { color: var(--ds-color-text-muted); }
+.ds-text--tone-danger  { color: var(--ds-color-text-danger); }
+
+.ds-text--weight-regular { font-weight: var(--ds-font-weight-regular); }
+.ds-text--weight-bold    { font-weight: var(--ds-font-weight-bold); }

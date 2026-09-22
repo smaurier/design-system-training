@@ -1,5 +1,8 @@
 # Module 07 — Storybook (notions)
 
+> **Note versions (mise à jour 22/09/2026) :** au 22/09/2026, la version courante est **Storybook 10.6** (`npm view storybook version`). Ce module a été écrit pour **Storybook 8** ; l'API CSF3 (`Meta` + `StoryObj` + `args`) est **identique** en 8, 9 et 10. Ce qui change en 9+ : les types `Meta`/`StoryObj` et les portable stories (`composeStories`, `setProjectAnnotations`) s'importent depuis **`@storybook/react-vite`** ; `addon-essentials` est intégré au cœur ; `@storybook/test` devient `storybook/test`. Les labs-gestes de ce cours (`labs/lab-01…`) sont écrits et vérifiés sur **10.6** : en cas de doute, ce sont eux qui font foi, pas les encadrés « Storybook 9 » ci-dessous.
+
+
 | Difficulté | Durée estimée |
 |------------|---------------|
 | 2/5        | 45 min        |

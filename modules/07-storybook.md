@@ -15,6 +15,8 @@ last-reviewed: 2026-07
 > **Outcomes — tu sauras FAIRE :** écrire des stories CSF3 (Component Story Format) avec `args`/`argTypes`, générer une documentation autodocs pilotable via controls, valider le contraste RGAA d'un composant avec l'addon a11y.
 > **Difficulté :** :star::star:
 
+> **Note versions (mise à jour 22/09/2026) :** au 22/09/2026, la version courante est **Storybook 10.6** (`npm view storybook version`). Ce module a été écrit pour **Storybook 8** ; l'API CSF3 (`Meta` + `StoryObj` + `args`) est **identique** en 8, 9 et 10. Ce qui change en 9+ : les types `Meta`/`StoryObj` et les portable stories (`composeStories`, `setProjectAnnotations`) s'importent depuis **`@storybook/react-vite`** ; `addon-essentials` est intégré au cœur ; `@storybook/test` devient `storybook/test`. Les labs-gestes de ce cours (`labs/lab-01…`) sont écrits et vérifiés sur **10.6** : en cas de doute, ce sont eux qui font foi, pas les encadrés « Storybook 9 » ci-dessous.
+
 > **Note versions (vérifié Context7, Storybook 8.6) :** ce module cible **Storybook 8** (`Meta`/`StoryObj` importés de `@storybook/react`, utilitaires de test dans `@storybook/test`). Storybook 9 consolide les packages : les addons `a11y`, `interactions`, `viewport` intègrent le cœur et `@storybook/test` devient `storybook/test`. L'API CSF3 elle-même (Meta + StoryObj + args) est **identique** entre 8 et 9. Les évolutions v9 sont signalées en encadré au fil du module.
 
 ## 1. Cas concret d'abord

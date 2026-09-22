@@ -1,0 +1,19 @@
+/* tokens.css — la fondation (FOURNIE, ne pas modifier). */
+:root {
+  --ds-font-family: "Inter", system-ui, sans-serif;
+
+  --ds-font-size-sm: 0.875rem;
+  --ds-font-size-md: 1rem;
+  --ds-font-size-lg: 1.25rem;
+
+  --ds-line-height-sm: 1.4;
+  --ds-line-height-md: 1.5;
+  --ds-line-height-lg: 1.4;
+
+  --ds-font-weight-regular: 400;
+  --ds-font-weight-bold: 600;
+
+  --ds-color-text-default: #1f2a24;
+  --ds-color-text-muted: #5b6660;
+  --ds-color-text-danger: #9b2c2c;
+}

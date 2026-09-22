@@ -22,6 +22,23 @@ Cours ajouté suite au brainstorm TribuZen — lacune identifiée : shadcn/ui et
 | 08 | [Accessibilité appliquée RGAA](modules/08-accessibilite.md) | 75 min |
 | 09 | [Tamagui — design system cross-platform (Web + RN)](modules/09-tamagui.md) | 120 min |
 
+## Labs — refonte du 22/09/2026 : un lab = un geste métier complet
+
+Les labs historiques (`labs/lab-01-css-fondamentaux` … `lab-09-tamagui`, un outil chacun, sans oracle) sont **remplacés progressivement** par des labs-gestes avec oracle exécutable (`src/` starter · `test/` RTL + jest-axe + stories rendues par `composeStories` · `solution/` séparée). Outillage partagé dans `labs/package.json` (React 19.3, Storybook 10.6, vitest 5). Depuis `labs/` : `npm install` puis `npm run lab:NN`.
+
+| # | Lab | Forme | Geste | Oracle |
+|---|-----|-------|-------|--------|
+| 01 | [`lab-01-text-de-zero`](labs/lab-01-text-de-zero/README.md) | Zéro | `Text` avec ses six endroits : contrat, tokens → style, hygiène DOM, a11y, story, test | ✅ |
+| 02 | [`lab-02-button-de-zero`](labs/lab-02-button-de-zero/README.md) | Zéro | `Button` : variants `cva`, `asChild` (Radix Slot), `loading`/`disabled` accessibles | ✅ |
+| 03 | [`lab-03-ajouter-lines-a-text`](labs/lab-03-ajouter-lines-a-text/README.md) | Intervention | ajouter `lines` à `Text` consommé par 3 écrans : findings avant code, non-régression, alternative a11y, story | ✅ |
+| 04 | à écrire | Intervention | bug a11y rapporté sur un `Dialog` Radix | · |
+| 05 | à écrire | Zéro | `RoutineCard` composé + stories des états vide/chargement/erreur | · |
+| 06 | à écrire | Intervention | dark mode par les tokens sans toucher aux consommateurs | · |
+| 07 | à écrire | Intervention | migrer le catalogue Storybook (le corpus cible 8/9, courant 10.6) | · |
+| 08 | à écrire | Zéro | Tamagui cross-platform | · |
+
+CSS fondamentaux et Framer Motion deviennent des lectures d'appui (« Lire avant »), pas des labs.
+
 ## TribuZen deliverables
 
 - `tribuzen/design.md` — direction artistique complète
