@@ -22,7 +22,10 @@
     "check:05": "tsc --noEmit -p lab-05-routinecard-de-zero",
     "lab:06": "vitest run --typecheck --root lab-06-dark-mode-par-les-tokens",
     "solution:06": "vitest run --typecheck --root lab-06-dark-mode-par-les-tokens --config vitest.solution.config.ts",
-    "check:06": "tsc --noEmit -p lab-06-dark-mode-par-les-tokens"
+    "check:06": "tsc --noEmit -p lab-06-dark-mode-par-les-tokens",
+    "lab:07": "vitest run --typecheck --root lab-07-migrer-storybook",
+    "solution:07": "vitest run --typecheck --root lab-07-migrer-storybook --config vitest.solution.config.ts",
+    "check:07": "tsc --noEmit -p lab-07-migrer-storybook"
   },
   "engines": {
     "node": ">=22.12.0"

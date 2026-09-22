@@ -1,0 +1,11 @@
+.ds-badge {
+  display: inline-block;
+  font-family: var(--ds-font-family);
+  font-size: var(--ds-font-size-sm);
+  font-weight: var(--ds-font-weight-bold);
+  padding: 0.125rem 0.5rem;
+  border-radius: 999px;
+}
+.ds-badge--tone-success { background: #d7ecdf; color: #1f2a24; }
+.ds-badge--tone-warning { background: #f6e6c7; color: #6b4d10; }
+.ds-badge--tone-danger  { background: #f3d3d3; color: #6b1717; }
