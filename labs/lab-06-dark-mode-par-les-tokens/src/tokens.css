@@ -1,0 +1,39 @@
+/* tokens.css — L'EXISTANT, EN PRODUCTION (mode clair uniquement). Ticket : « ajouter un
+   mode sombre — SANS toucher à Text.tsx, Button.tsx, ni leurs .css. » Si tu as besoin
+   d'ouvrir un de ces fichiers pour faire fonctionner le mode sombre, c'est que tu n'es pas
+   au bon endroit : tout doit passer par ce fichier, en ajoutant un bloc `[data-theme="dark"]`
+   qui redéfinit les MÊMES variables avec des valeurs différentes. Aucun nom de variable ne
+   change (les composants les référencent tels quels, ils ne savent rien du thème actif).
+*/
+:root {
+  --ds-font-family: "Inter", system-ui, sans-serif;
+
+  --ds-font-size-sm: 0.875rem;
+  --ds-font-size-md: 1rem;
+  --ds-font-size-lg: 1.25rem;
+
+  --ds-font-weight-regular: 400;
+  --ds-font-weight-bold: 600;
+
+  --ds-color-text-default: #1f2a24;
+  --ds-color-text-muted: #5b6660;
+  --ds-color-text-danger: #9b2c2c;
+
+  --ds-radius-md: 0.5rem;
+  --ds-space-sm: 0.375rem 0.75rem;
+  --ds-space-md: 0.5rem 1rem;
+  --ds-space-lg: 0.75rem 1.25rem;
+
+  --ds-color-primary: #2f6f4e;
+  --ds-color-primary-contrast: #ffffff;
+  --ds-color-secondary: #e7ede9;
+  --ds-color-secondary-contrast: #1f2a24;
+  --ds-color-danger: #9b2c2c;
+  --ds-color-danger-contrast: #ffffff;
+
+  --ds-focus-ring: 0 0 0 3px #b7d7c6;
+  --ds-opacity-disabled: 0.6;
+}
+
+/* Ajoute ici un bloc [data-theme="dark"] { ... } qui redéfinit les variables de COULEUR
+   (pas les tailles/espacements, qui n'ont pas de raison de changer avec le thème). */

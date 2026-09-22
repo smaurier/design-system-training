@@ -19,7 +19,10 @@
     "check:04": "tsc --noEmit -p lab-04-bug-a11y-dialog",
     "lab:05": "vitest run --typecheck --root lab-05-routinecard-de-zero",
     "solution:05": "vitest run --typecheck --root lab-05-routinecard-de-zero --config vitest.solution.config.ts",
-    "check:05": "tsc --noEmit -p lab-05-routinecard-de-zero"
+    "check:05": "tsc --noEmit -p lab-05-routinecard-de-zero",
+    "lab:06": "vitest run --typecheck --root lab-06-dark-mode-par-les-tokens",
+    "solution:06": "vitest run --typecheck --root lab-06-dark-mode-par-les-tokens --config vitest.solution.config.ts",
+    "check:06": "tsc --noEmit -p lab-06-dark-mode-par-les-tokens"
   },
   "engines": {
     "node": ">=22.12.0"

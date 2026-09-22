@@ -1,0 +1,30 @@
+/* Button.css — ENDROIT 2 : mapping prop → style, tout en tokens. */
+.ds-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 0;
+  border-radius: var(--ds-radius-md);
+  font-family: var(--ds-font-family);
+  font-weight: var(--ds-font-weight-bold);
+  cursor: pointer;
+  text-decoration: none;
+}
+.ds-button:focus-visible { outline: none; box-shadow: var(--ds-focus-ring); }
+.ds-button:disabled, .ds-button[aria-disabled="true"] { cursor: not-allowed; opacity: var(--ds-opacity-disabled); }
+
+.ds-button--size-sm { padding: var(--ds-space-sm); font-size: var(--ds-font-size-sm); }
+.ds-button--size-md { padding: var(--ds-space-md); font-size: var(--ds-font-size-md); }
+.ds-button--size-lg { padding: var(--ds-space-lg); font-size: var(--ds-font-size-lg); }
+
+.ds-button--variant-primary   { background: var(--ds-color-primary);   color: var(--ds-color-primary-contrast); }
+.ds-button--variant-secondary { background: var(--ds-color-secondary); color: var(--ds-color-secondary-contrast); }
+.ds-button--variant-danger    { background: var(--ds-color-danger);    color: var(--ds-color-danger-contrast); }
+
+.ds-button__spinner {
+  width: 1em; height: 1em; border-radius: 50%;
+  border: 2px solid currentColor; border-right-color: transparent;
+  animation: ds-spin 0.8s linear infinite;
+}
+@keyframes ds-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .ds-button__spinner { animation: none; } }
