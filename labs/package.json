@@ -13,7 +13,10 @@
     "check:02": "tsc --noEmit -p lab-02-button-de-zero",
     "lab:03": "vitest run --typecheck --root lab-03-ajouter-lines-a-text",
     "solution:03": "vitest run --typecheck --root lab-03-ajouter-lines-a-text --config vitest.solution.config.ts",
-    "check:03": "tsc --noEmit -p lab-03-ajouter-lines-a-text"
+    "check:03": "tsc --noEmit -p lab-03-ajouter-lines-a-text",
+    "lab:04": "vitest run --typecheck --root lab-04-bug-a11y-dialog",
+    "solution:04": "vitest run --typecheck --root lab-04-bug-a11y-dialog --config vitest.solution.config.ts",
+    "check:04": "tsc --noEmit -p lab-04-bug-a11y-dialog"
   },
   "engines": {
     "node": ">=22.12.0"
@@ -38,6 +41,7 @@
     "typescript": "7.0.2",
     "vite": "^8.3.0",
     "vitest": "5.0.1",
-    "@radix-ui/react-slot": "1.3.3"
+    "@radix-ui/react-slot": "1.3.3",
+    "@radix-ui/react-dialog": "1.1.23"
   }
 }
