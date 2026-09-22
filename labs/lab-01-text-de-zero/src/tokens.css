@@ -1,0 +1,20 @@
+/* tokens.css — la fondation du design system TribuZen (FOURNIE : elle préexiste à tout composant).
+   Un composant ne contient jamais une couleur ou une taille en dur : il consomme ces tokens. */
+:root {
+  --ds-font-family: "Inter", system-ui, sans-serif;
+
+  --ds-font-size-sm: 0.875rem;
+  --ds-font-size-md: 1rem;
+  --ds-font-size-lg: 1.25rem;
+
+  --ds-line-height-sm: 1.4;
+  --ds-line-height-md: 1.5;
+  --ds-line-height-lg: 1.4;
+
+  --ds-font-weight-regular: 400;
+  --ds-font-weight-bold: 600;
+
+  --ds-color-text-default: #1f2a24;
+  --ds-color-text-muted: #5b6660;
+  --ds-color-text-danger: #9b2c2c;
+}

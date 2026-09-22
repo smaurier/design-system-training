@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "@lab/*": [
+        "./solution/*"
+      ]
+    }
+  },
+  "include": [
+    "solution",
+    "test",
+    "vitest.setup.ts",
+    "vitest-axe.d.ts"
+  ]
+}

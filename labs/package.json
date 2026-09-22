@@ -1,0 +1,36 @@
+{
+  "name": "design-system-labs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Oracles exécutables des labs Design System (règle « un lab = un geste métier complet ») : chaque lab = README énoncé + src/ starter + test/ (RTL + axe + stories rendues) + solution/ séparée.",
+  "type": "module",
+  "scripts": {
+    "lab:01": "vitest run --typecheck --root lab-01-text-de-zero",
+    "solution:01": "vitest run --typecheck --root lab-01-text-de-zero --config vitest.solution.config.ts",
+    "check:01": "tsc --noEmit -p lab-01-text-de-zero"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "10.6.0",
+    "@storybook/react-vite": "10.6.0",
+    "@testing-library/jest-dom": "7.0.1",
+    "@testing-library/react": "16.3.3",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "6.1.1",
+    "class-variance-authority": "0.7.1",
+    "jest-axe": "11.0.0",
+    "@types/jest-axe": "^3.5.9",
+    "jsdom": "30.1.1",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "storybook": "10.6.0",
+    "typescript": "7.0.2",
+    "vite": "^8.3.0",
+    "vitest": "5.0.1"
+  }
+}
