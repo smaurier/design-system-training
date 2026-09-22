@@ -16,7 +16,10 @@
     "check:03": "tsc --noEmit -p lab-03-ajouter-lines-a-text",
     "lab:04": "vitest run --typecheck --root lab-04-bug-a11y-dialog",
     "solution:04": "vitest run --typecheck --root lab-04-bug-a11y-dialog --config vitest.solution.config.ts",
-    "check:04": "tsc --noEmit -p lab-04-bug-a11y-dialog"
+    "check:04": "tsc --noEmit -p lab-04-bug-a11y-dialog",
+    "lab:05": "vitest run --typecheck --root lab-05-routinecard-de-zero",
+    "solution:05": "vitest run --typecheck --root lab-05-routinecard-de-zero --config vitest.solution.config.ts",
+    "check:05": "tsc --noEmit -p lab-05-routinecard-de-zero"
   },
   "engines": {
     "node": ">=22.12.0"

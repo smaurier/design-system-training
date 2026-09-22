@@ -1,0 +1,24 @@
+/* RoutineCard.css — mapping état → style, uniquement via tokens (aucune couleur en dur). */
+.ds-routine-card {
+  font-family: var(--ds-font-family);
+  font-size: var(--ds-font-size-md);
+  color: var(--ds-color-text-default);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.ds-routine-card--error {
+  color: var(--ds-color-text-danger);
+}
+
+.ds-routine-card--empty {
+  color: var(--ds-color-text-muted);
+}
+
+.ds-routine-card__skeleton-row {
+  height: 1.25rem;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  background: var(--ds-color-text-muted);
+  opacity: 0.15;
+}
