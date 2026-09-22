@@ -11,14 +11,14 @@ Cours ajouté suite au brainstorm TribuZen — lacune identifiée : shadcn/ui et
 <!-- labs-gestes:start -->
 ## Labs — refonte du 22/09/2026 : un lab = un geste métier complet
 
-> Règle qualité 5 du parcours : chaque lab est **un geste métier complet**, sous deux formes — **Zéro** (construire de zéro un artefact réel et entier) ou **Intervention** (modifier de l'existant avec consommateurs, findings avant code, non-régression). Un lab n'entre en file qu'avec un **oracle exécutable** (`src/` starter · `test/` · `solution/` séparée). Les labs historiques de ce cours (un concept par lab, sans oracle) restent dans `labs/` jusqu'à remplacement et **ne sont plus la file**. Cible détaillée : [`docs/gestes-complets.md`](../docs/gestes-complets.md). État : **3/8 avec oracle**.
+> Règle qualité 5 du parcours : chaque lab est **un geste métier complet**, sous deux formes — **Zéro** (construire de zéro un artefact réel et entier) ou **Intervention** (modifier de l'existant avec consommateurs, findings avant code, non-régression). Un lab n'entre en file qu'avec un **oracle exécutable** (`src/` starter · `test/` · `solution/` séparée). Les labs historiques de ce cours (un concept par lab, sans oracle) restent dans `labs/` jusqu'à remplacement et **ne sont plus la file**. Cible détaillée : [`docs/gestes-complets.md`](../docs/gestes-complets.md). État : **4/8 avec oracle**.
 
 | # | Lab | Forme | Geste | Oracle |
 |---|-----|-------|-------|--------|
 | 01 | [`lab-01-text-de-zero`](labs/lab-01-text-de-zero/README.md) | Zéro | Text avec ses six endroits | ✅ vérifié |
 | 02 | [`lab-02-button-de-zero`](labs/lab-02-button-de-zero/README.md) | Zéro | Button : cva, asChild, loading/disabled accessibles | ✅ vérifié |
 | 03 | [`lab-03-ajouter-lines-a-text`](labs/lab-03-ajouter-lines-a-text/README.md) | Intervention | ajouter lines à Text consommé par 3 écrans | ✅ vérifié |
-| 04 | `lab-04-bug-a11y-dialog` | Intervention | bug rapporté sur un Dialog Radix, findings avant code | · à écrire |
+| 04 | [`lab-04-bug-a11y-dialog`](labs/lab-04-bug-a11y-dialog/README.md) | Intervention | bug rapporté sur un Dialog Radix, findings avant code | ✅ vérifié |
 | 05 | `lab-05-routinecard-de-zero` | Zéro | composé + stories des états vide/chargement/erreur | · à écrire |
 | 06 | `lab-06-dark-mode-par-les-tokens` | Intervention | sans toucher aux consommateurs | · à écrire |
 | 07 | `lab-07-migrer-storybook` | Intervention | catalogue SB8/9 → 10.6 | · à écrire |
