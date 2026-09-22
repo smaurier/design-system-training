@@ -11,7 +11,7 @@ Cours ajouté suite au brainstorm TribuZen — lacune identifiée : shadcn/ui et
 <!-- labs-gestes:start -->
 ## Labs — refonte du 22/09/2026 : un lab = un geste métier complet
 
-> Règle qualité 5 du parcours : chaque lab est **un geste métier complet**, sous deux formes — **Zéro** (construire de zéro un artefact réel et entier) ou **Intervention** (modifier de l'existant avec consommateurs, findings avant code, non-régression). Un lab n'entre en file qu'avec un **oracle exécutable** (`src/` starter · `test/` · `solution/` séparée). Les labs historiques de ce cours (un concept par lab, sans oracle) restent dans `labs/` jusqu'à remplacement et **ne sont plus la file**. Cible détaillée : [`docs/gestes-complets.md`](../docs/gestes-complets.md). État : **6/8 avec oracle**.
+> Règle qualité 5 du parcours : chaque lab est **un geste métier complet**, sous deux formes — **Zéro** (construire de zéro un artefact réel et entier) ou **Intervention** (modifier de l'existant avec consommateurs, findings avant code, non-régression). Un lab n'entre en file qu'avec un **oracle exécutable** (`src/` starter · `test/` · `solution/` séparée). Les labs historiques de ce cours (un concept par lab, sans oracle) restent dans `labs/` jusqu'à remplacement et **ne sont plus la file**. Cible détaillée : [`docs/gestes-complets.md`](../docs/gestes-complets.md). État : **7/8 avec oracle**.
 
 | # | Lab | Forme | Geste | Oracle |
 |---|-----|-------|-------|--------|
@@ -21,7 +21,7 @@ Cours ajouté suite au brainstorm TribuZen — lacune identifiée : shadcn/ui et
 | 04 | [`lab-04-bug-a11y-dialog`](labs/lab-04-bug-a11y-dialog/README.md) | Intervention | bug rapporté sur un Dialog Radix, findings avant code | ✅ vérifié |
 | 05 | [`lab-05-routinecard-de-zero`](labs/lab-05-routinecard-de-zero/README.md) | Zéro | composé + stories des états vide/chargement/erreur | ✅ vérifié |
 | 06 | [`lab-06-dark-mode-par-les-tokens`](labs/lab-06-dark-mode-par-les-tokens/README.md) | Intervention | sans toucher aux consommateurs | ✅ vérifié |
-| 07 | `lab-07-migrer-storybook` | Intervention | catalogue SB8/9 → 10.6 | · à écrire |
+| 07 | [`lab-07-migrer-storybook`](labs/lab-07-migrer-storybook/README.md) | Intervention | catalogue SB8/9 → 10.6 | ✅ vérifié |
 | 08 | `lab-08-tamagui-de-zero` | Zéro | cross-platform web + RN | · à écrire |
 
 <!-- labs-gestes:end -->
