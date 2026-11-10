@@ -12,6 +12,12 @@ last-reviewed: 2026-07
 
 # Accessibilité du design system (RGAA / WCAG 2.2 AA)
 
+> 📐 **Les fondamentaux d'accessibilité sont dans le cours 25 HTML & CSS**, source unique du
+> curriculum. Ce module garde l'angle propre à un design system : **auditer les tokens** plutôt
+> que des écrans, figer les décisions une fois, et les verrouiller par des tests de composants et
+> par Storybook.
+
+
 > **Outcomes — tu sauras FAIRE :** auditer les tokens de couleur d'un design system contre les seuils RGAA, rendre un composant conforme (contraste, focus, cible tactile, nom accessible, clavier), écrire des tests jest-axe réels sur les composants du design system.
 > **Difficulté :** :star::star::star:
 
@@ -51,11 +57,7 @@ Ce module te donne la grille RGAA/WCAG pour repérer ces défauts, la méthode p
 
 ### 2.1 Le référentiel : RGAA, WCAG, niveaux
 
-- **WCAG 2.2** (Web Content Accessibility Guidelines, W3C, décembre 2023) est la norme technique internationale. Elle organise ses critères (Success Criteria, « SC ») en trois niveaux : **A** (minimal), **AA** (cible légale usuelle), **AAA** (renforcé, rarement exigé en totalité).
-- **RGAA 4.1** (Référentiel Général d'Amélioration de l'Accessibilité, France) est la déclinaison opérationnelle française. Il est **aligné sur WCAG 2.1 niveau AA** et organise les vérifications en **13 thématiques** (images, couleurs, scripts, formulaires, navigation, consultation…) et 106 critères.
-- **WCAG 2.2 ajoute** des critères que RGAA 4.1 n'intègre pas encore formellement mais qu'un design system moderne doit viser : **2.4.11 Focus non masqué (AA)**, **2.5.8 Taille de cible minimale (AA, 24px)**, **3.3.8 Authentification accessible (AA)**. On travaille donc « RGAA 4.1 AA + surcouche WCAG 2.2 AA ».
-
-> La conformité légale française (loi du 11 février 2005, décret 2019) impose le RGAA aux services publics, collectivités et grandes entreprises. Une startup privée comme TribuZen n'y est pas contrainte, mais la cible AA reste le standard de tout partenariat institutionnel (CAF, PMI) et le seuil de non-discrimination.
+> 📐 **Traité dans le cours 25 HTML & CSS**, module 00, § 4 bis « Le référentiel en bref ».
 
 ### 2.2 Contraste des couleurs — auditer les tokens
 
@@ -116,93 +118,13 @@ Distinction critique `:focus` vs `:focus-visible` :
 }
 ```
 
-### 2.4 Cibles tactiles
+### 2.4 Cibles tactiles, 2.5 clavier, 2.6 natif d'abord, 2.7 formulaires, 2.8 statuts
 
-- **WCAG 2.5.8 Taille de cible (Minimum) (AA, 2.2) :** toute cible tactile fait au moins **24×24 px CSS** (ou dispose d'un espacement suffisant autour). C'est le plancher AA.
-- **WCAG 2.5.5 Taille de cible (Amélioré) (AAA) :** **44×44 px** recommandé — la valeur confort mobile (aussi la reco Apple HIG / Material). On vise 44px quand la place le permet, 24px est l'exigence AA à ne jamais franchir vers le bas.
+> 📐 **Traité dans le cours 25 HTML & CSS**, module 16 § 2.2 et module 17 pour les cibles et le clavier, module 01 § 1.2 pour « natif d'abord », module 14 pour les formulaires, module 13 § 7 et module 14 § 4 pour les messages de statut.
 
-```tsx
-// Zone cliquable dimensionnée par token, pas par la taille de l'icône
-<button className="icon-btn" aria-label="Supprimer la routine">
-  <TrashIcon aria-hidden="true" width={16} height={16} />
-</button>
-```
-```css
-.icon-btn {
-  min-width: 44px;   /* confort mobile (AAA) */
-  min-height: 44px;  /* jamais < 24px (AA) */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-```
-
-### 2.5 Navigation clavier
-
-**WCAG 2.1.1 Clavier (A) / RGAA 7.3 :** toute action possible à la souris doit l'être au clavier. Règles :
-- Utiliser des éléments **nativement focusables et activables** (`<button>`, `<a href>`, `<input>`) : ils gèrent Tab, Entrée/Espace et l'ordre de focus gratuitement.
-- **Ne pas** rendre un `<div>` interactif : il faudrait rajouter `role`, `tabIndex={0}` *et* un handler clavier — trois occasions d'erreur pour rien.
-- **Ordre de focus logique** = ordre du DOM. Ne pas utiliser de `tabindex` positif (`tabindex="1"` casse l'ordre global).
-- **Piège du focus** (focus trap) : légitime *seulement* dans une modale ouverte (le focus reste dedans, Échap ferme). Illégitime partout ailleurs.
-
-### 2.6 HTML natif d'abord, ARIA en dernier recours
-
-**Première règle d'ARIA (W3C) : « No ARIA is better than bad ARIA ».** Un élément HTML natif porte déjà son rôle, son état et son comportement clavier. ARIA ne fait qu'*ajouter de la sémantique* — il ne change jamais le comportement.
-
-Les 5 règles d'usage d'ARIA (résumé) :
-1. Si un élément HTML natif convient, l'utiliser (`<button>` plutôt que `<div role="button">`).
-2. Ne pas changer la sémantique native (`<h2 role="button">` : non).
-3. Tout contrôle ARIA doit être utilisable au clavier.
-4. Ne pas mettre `role="presentation"` / `aria-hidden="true"` sur un élément focusable (il disparaît du lecteur d'écran mais reste tabbable → confusion totale).
-5. Tout élément interactif doit avoir un **nom accessible**.
-
-Le **nom accessible** (WCAG 4.1.2 Nom, rôle, valeur) se calcule dans l'ordre : contenu textuel > `aria-labelledby` > `aria-label`. Pour un bouton icône, l'icône décorative est masquée (`aria-hidden`) et le nom vient d'`aria-label` :
-
-```tsx
-// Icône seule : nom via aria-label, icône masquée au lecteur d'écran
-<button aria-label="Supprimer la routine">
-  <TrashIcon aria-hidden="true" />
-</button>
-
-// Encore mieux : texte visible (bénéficie à tout le monde, pas d'aria)
-<button>
-  <TrashIcon aria-hidden="true" />
-  <span>Supprimer</span>
-</button>
-```
-
-### 2.7 Formulaires accessibles
-
-Thématique RGAA 11, socle WCAG :
-- **Étiquette liée (3.3.2 / RGAA 11.1) :** chaque champ a un `<label htmlFor>` relié à l'`id` du champ. Le `placeholder` **n'est pas** une étiquette (il disparaît à la saisie, contraste souvent insuffisant).
-- **Groupes :** un ensemble de radios/checkboxes est enveloppé d'un `<fieldset>` + `<legend>`.
-- **Erreurs (3.3.1 Identification / RGAA 11.10 ; 3.3.3 Suggestion / RGAA 11.11) :** l'erreur est décrite en texte (pas seulement en couleur), reliée au champ par `aria-describedby`, et le champ porte `aria-invalid="true"`.
-- **Champ requis :** `required` natif ; l'astérisque visuel est doublé d'un texte ou d'`aria-required`.
-
-```tsx
-<label htmlFor="invite-email">E-mail de l'invité·e</label>
-<input
-  id="invite-email"
-  type="email"
-  required
-  aria-invalid={!!error}
-  aria-describedby={error ? 'invite-email-error' : undefined}
-/>
-{error && (
-  <p id="invite-email-error" className="field-error">{error}</p>
-)}
-```
-
-### 2.8 Messages de statut (aria-live)
-
-**WCAG 4.1.3 Messages de statut (AA) :** un message qui apparaît sans changement de focus (toast, « Invitation envoyée », résultat de validation) doit être annoncé par le lecteur d'écran via une **région live** :
-- `aria-live="polite"` : annoncé quand l'utilisateur est disponible (succès, statut courant). Défaut recommandé.
-- `aria-live="assertive"` (ou `role="alert"`) : interrompt — réservé aux erreurs critiques.
-
-```tsx
-{/* Région live persistante ; le texte qui y entre est annoncé */}
-<div aria-live="polite" className="sr-only">{statusMessage}</div>
-```
+Ce qui reste du ressort d'un design system, et que les sections suivantes traitent : **décider
+une fois pour toutes** ces valeurs, les figer en tokens, et les verrouiller par un test de
+composant plutôt que par la vigilance de chaque intégrateur.
 
 ### 2.9 Tests automatisés et leurs limites
 
